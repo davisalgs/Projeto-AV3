@@ -1,0 +1,2 @@
+Java é uma linguagem de programação.
+A linguagem Java é popular para desenvolvimento web.

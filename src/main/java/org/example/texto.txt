@@ -1,3 +1,7 @@
-O Brennus foi o primeiro couraçado pré-dreadnought operado Davi pela Marinha Nacional Francesa, árvore. 
-Sua construção começou em janeiro de 1889 no Arsenal de Lorient e foi lançado em davi ao mar em, árvore outubro de 1891,
-mas problemas de instabilidade adiaram seu comissionamento até davi janeiro de 1896 árvore.
+ “Good programming is not learned from 
+ generalities, but by seeing how significant 
+ programs can be made clean, easy to 
+ read, easy to maintain and modify, 
+ human-engineered, efficient, and reliable, 
+ by the application of common sense and 
+ by the use of good programming practices.” 

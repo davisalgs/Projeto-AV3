@@ -11,6 +11,8 @@ public class IndiceRemissivo {
         this.textoOriginal = texto;
 
         tabela = new TabelaHash<>();
+        tabela.insere((int ) 'á', new ArvoreBinariaBusca<>() );
+        tabela.insere((int ) 'Á', new ArvoreBinariaBusca<>() );
         for (int i = (int) 'a'; i <= (int) 'z'; i++) {
             tabela.insere(i, new ArvoreBinariaBusca<>());
         }

@@ -13,12 +13,14 @@ public class Main {
             System.out.println("Índice Remissivo:");
             indiceRemissivo.imprimirFormatado();
 
+
             // Ler palavras-chave para pesquisa
             String argumentosDeBusca = LeitorArquivos.lerArgumentos(); // Ler palavras-chave do arquivo
 
             // Buscar palavras no índice
             String resultadoBusca = indiceRemissivo.buscaNoIndice(argumentosDeBusca);
             System.out.println("Resultado da Busca:\n" + resultadoBusca);
+            Saida.saida(resultadoBusca);
 
         } catch (IOException e) {
             e.printStackTrace();

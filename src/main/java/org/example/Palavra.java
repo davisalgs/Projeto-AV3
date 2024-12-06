@@ -4,7 +4,7 @@ package org.example;
 import org.example.TabelaHash.ListaDuplamenteEncadeada;
 
 
-// implementada a interface Comparable para permitir comparações entre objetos do tipo Palavra.
+// implementada a interface Comparable que perimite comparações entre objetos do tipo Palavra.
 public class Palavra implements Comparable<Palavra> {
 
 

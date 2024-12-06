@@ -106,7 +106,7 @@ public class IndiceRemissivo {
                     Palavra novaOcorrencia = new Palavra(palavra);  // Cria uma nova instância de Palavra com a palavra atual
                     Palavra buscada = arvoreDaInicial.busca(novaOcorrencia);  // Verifica se a palavra já existe na árvore
 
-                    int nLinha = i + 1;  // Armazena o número da linha (começando de 1)
+                    int nLinha = i + 1;  // armazena o número da linha (começando de 1)
 
                     if (buscada == null) {
                         // se a palavra não foi encontrada, adiciona o número da linha e insere a palavra na árvore

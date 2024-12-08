@@ -6,8 +6,8 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> {
     private int tamanho;
 
     public ArvoreBinariaBusca() {
-        this.raiz = null;
         this.tamanho = 0;
+        this.raiz = null;
     }
 
     public int tamanho() {
@@ -21,9 +21,7 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> {
     public void insere(T elemento) {
         this.raiz = insere(raiz, elemento);
     }
-    public T busca(T elemento){
-        return busca(raiz, elemento);
-    }
+
     private TreeNode<T> insere(TreeNode<T> noArvore, T elemento) {
         if (noArvore == null) {
             noArvore = new TreeNode<T>(elemento);
@@ -37,7 +35,25 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> {
 
             noArvore.esquerdo = insere(noArvore.esquerdo, elemento);
         }
+
         return noArvore;
+
+    }
+
+    public T busca(T elemento){
+        return busca(raiz, elemento);
+    }
+
+    public void imprimirEmOrdem(){
+        imprimirEmOrdem(raiz);
+    }
+    private void imprimirEmOrdem(TreeNode<T> noArvore){
+        if(noArvore==null){
+            return;
+        }
+        this.imprimirEmOrdem(noArvore.esquerdo);
+        System.out.println(noArvore.getElemento().toString());
+        this.imprimirEmOrdem(noArvore.direito);
     }
 
     private T busca(TreeNode<T> noArvore, T elemento) {
@@ -55,17 +71,5 @@ public class ArvoreBinariaBusca<T extends Comparable<T>> {
             return busca(noArvore.direito, elemento);
         }
     }
-    public void imprimirEmOrdem(){
-        imprimirEmOrdem(raiz);
-    }
-    private void imprimirEmOrdem(TreeNode<T> noArvore){
-        if(noArvore==null){
-            return;
-        }
-        this.imprimirEmOrdem(noArvore.esquerdo);
-        System.out.println(noArvore.getElemento().toString());
-        this.imprimirEmOrdem(noArvore.direito);
-    }
-
 }
 

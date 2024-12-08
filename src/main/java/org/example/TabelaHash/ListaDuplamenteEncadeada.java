@@ -42,7 +42,7 @@ public class ListaDuplamenteEncadeada<T> {
 
     public void adicionar(int posicao, T elemento){
         if(posicao<0 || posicao>this.tamanho){
-            throw new IndexOutOfBoundsException("posicao invalida");
+            throw new IndexOutOfBoundsException("posiçao invalida");
         }
 
         if(posicao==0){
@@ -98,14 +98,19 @@ public class ListaDuplamenteEncadeada<T> {
         }
         this.tamanho--;
     }
+
     public void remover(int posicao){
         if(posicao<0 || posicao>=this.tamanho){
             throw new IndexOutOfBoundsException("posicao invalida");
+
         }
+
         if(posicao==0){
             this.removerComeco();
             return;
+
         }
+
         if(posicao==this.tamanho-1){
             this.removerFinal();
             return;
@@ -116,9 +121,11 @@ public class ListaDuplamenteEncadeada<T> {
 
             atual = atual.getProximo();
         }
+
         atual.getProximo().getProximo().setAnterior(atual);
         atual.setProximo(atual.getProximo().getProximo());
         this.tamanho--;
+
     }
 
     public void set(int posicao,T elemento){

@@ -16,8 +16,8 @@ public class IndiceRemissivo {
         tabela = new TabelaHash<>();
 
 
-        tabela.insere((int) 'á', new ArvoreBinariaBusca<>() );
-        tabela.insere((int) 'Á', new ArvoreBinariaBusca<>() );
+        //tabela.insere((int) 'á', new ArvoreBinariaBusca<>() );
+        //tabela.insere((int) 'Á', new ArvoreBinariaBusca<>() );
 
         // insere árvores binárias para as letras de 'a' a 'z'
         for (int i = (int) 'a'; i <= (int) 'z'; i++) {
@@ -28,7 +28,7 @@ public class IndiceRemissivo {
         construirIndiceRemissivo(texto);
     }
 
-    // retorna o texto original
+
     public String getTextoOriginal() {
         return textoOriginal;
     }
@@ -74,8 +74,10 @@ public class IndiceRemissivo {
         String conteudo = sb.toString();
         if (conteudo.isEmpty()) {
             return "nenhum argumento encontrado!";
+
         } else {
             return conteudo;
+
         }
     }
 

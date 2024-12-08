@@ -14,6 +14,7 @@ public class TabelaHash<K extends Comparable<K>, V> implements Map<K, V> {
         // cria um array de listas duplamente encadeadas usando reflexão
         this.tabela = (ListaDuplamenteEncadeada<Entrada<K, V>>[]) Array.newInstance(ListaDuplamenteEncadeada.class, capacidade);
         this.tamanho = 0;
+
     }
 
     // construtor padrão com capacidade inicial de 37
@@ -62,6 +63,7 @@ public class TabelaHash<K extends Comparable<K>, V> implements Map<K, V> {
         int indice = hash(chave); // calcula o índice da chave
         if (tabela[indice] == null) {
             return null; // retorna null se a lista na posição for nula
+
         }
         ListaDuplamenteEncadeada<Entrada<K, V>> lista = tabela[indice];
         Nodo<Entrada<K, V>> atual = lista.primeiro;
@@ -86,8 +88,10 @@ public class TabelaHash<K extends Comparable<K>, V> implements Map<K, V> {
                 return removido;
             }
             atual = atual.getProximo(); //move para o próximo elemento
+
         }
         return removido; //retorna null se a chave não for encontrada
+
     }
 
     @Override
